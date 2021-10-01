@@ -19,11 +19,9 @@ describe('Oauth feature api', () => {
       token = resAuthorization.body.access_token
 
       GETSearchUser.searchUser(token, user).then((resSearchUser) => {
-        cy.log(resSearchUser.body.data[0].id)
         id = resSearchUser.body.data[0].id
 
         GETUserProfile.userProfile(token, user, id).then((resUserProfile) => {
-          cy.log(resUserProfile.body.data[0].profile_image_url)
           linkImage = resUserProfile.body.data[0].profile_image_url
 
           GETUserImage.userImage(linkImage).then((resUserImage) => {
