@@ -5,7 +5,7 @@ import * as GETSearchUser from '../requests/GETSearchUser.request'
 import * as GETUserProfile from '../requests/GETUserProfile.request'
 import * as GETUserImage from '../requests/GETUserImage.request'
 
-describe('Oauth feature api', () => {
+describe('Twitch API Automation', () => {
 
   const user = Cypress.env('streamer')
 
@@ -13,7 +13,7 @@ describe('Oauth feature api', () => {
   let id = ''
   let linkImage = ''
 
-  it('Get acess Auth0 token', () => {
+  it('Get twitch user Icon and downloads it', () => {
     POSTGenerateToken.auth0Token().then((resAuthorization) => {
       expect(resAuthorization.status).to.eq(200)
       token = resAuthorization.body.access_token
