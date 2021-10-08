@@ -15,7 +15,6 @@ describe('Twitch API Automation', () => {
 
   it('Get twitch user Icon and downloads it', () => {
     POSTGenerateToken.auth0Token().then((resAuthorization) => {
-      expect(resAuthorization.status).to.eq(200)
       token = resAuthorization.body.access_token
 
       GETSearchUser.searchUser(token, user).then((resSearchUser) => {

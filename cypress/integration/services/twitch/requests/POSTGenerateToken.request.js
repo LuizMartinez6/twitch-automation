@@ -7,7 +7,6 @@ function auth0Token(){
   return cy.request({
     method: 'POST',
     url:'https://id.twitch.tv/oauth2/token',
-    form: true,
     body: payloadAuth0Token
   })
 }
