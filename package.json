@@ -4,12 +4,14 @@
   "description": "TBD.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "cypress open",
+    "test": "cypress run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@bahmutov/cy-api": "^1.5.0",
     "cypress": "^8.2.0",
     "eslint": "^7.32.0",
     "eslint-plugin-cypress": "^2.11.3"
